@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
         // Check for root before showing any UI
         if (WeakRootDetection.isDeviceRooted()) {
             Intent intent = new Intent(this, RootDetectedActivity.class);
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
             return;
         }
-        
+
         setContentView(R.layout.activity_main);
 
         storage = new InsecureStorage(this);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startVaultActivity() {
-        Intent intent = new Intent(this, VaultActivity.class);
+        Intent intent = new Intent(this, Challenge3.class);
         startActivity(intent);
         finish();
     }
