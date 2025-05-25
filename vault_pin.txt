@@ -1,4 +1,0 @@
-# This file contains sensitive data
-# DO NOT MODIFY OR DELETE
-# Format: Base64(VAULT_ACCESS_CODE:####:END)
-VkFVTFRfQUNDRVNTX0NPREU6NDU5NTpFTkQ=
