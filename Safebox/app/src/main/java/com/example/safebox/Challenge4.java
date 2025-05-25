@@ -16,7 +16,6 @@ public class Challenge4 extends AppCompatActivity {
 
     private static final byte XOR_KEY = 0x5A;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
