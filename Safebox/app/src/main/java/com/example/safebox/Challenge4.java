@@ -1,5 +1,6 @@
 package com.example.safebox;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,7 @@ public class Challenge4 extends AppCompatActivity {
                 String userInput = editTextFlag.getText().toString();
                 if (validateFlag(userInput)) {
                     Toast.makeText(Challenge4.this, "✅ Correct Flag!", Toast.LENGTH_SHORT).show();
+                    nextLevel();
                 } else {
                     Toast.makeText(Challenge4.this, "❌ Incorrect Flag", Toast.LENGTH_SHORT).show();
                 }
@@ -46,5 +48,11 @@ public class Challenge4 extends AppCompatActivity {
         }
         String actualFlag = new String(decoded);
         return submittedFlag.equals(actualFlag);
+    }
+
+    private void nextLevel() {
+        Intent intent = new Intent(this, Challenge5.class);
+        startActivity(intent);
+        finish();
     }
 }
