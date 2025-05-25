@@ -24,7 +24,9 @@ public class Challenge5 extends AppCompatActivity {
             public void onClick(View v) {
                 String userInput = editTextFlag.getText().toString();
                 if (ctfValidator.validateFlag(userInput)) {
+                    Toast.makeText(Challenge5.this, "✅ Correct Flag!", Toast.LENGTH_SHORT).show();
                 } else {
+                    Toast.makeText(Challenge5.this, "❌ Incorrect Flag", Toast.LENGTH_SHORT).show();
                 }
             }
         });

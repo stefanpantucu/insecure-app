@@ -107,6 +107,7 @@ public class InsecureStorage {
     // Intentionally insecure: Simple string comparison
     public boolean verifyPin(String inputPin) {
         String storedPin = getPin();
+        System.out.println(storedPin);
         if (storedPin == null) {
             return false;
         }

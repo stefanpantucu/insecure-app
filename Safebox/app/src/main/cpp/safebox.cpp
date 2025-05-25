@@ -1,17 +1,14 @@
 #include <jni.h>
 #include <string.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 static const int correct_flag[] = {
-        67, 84, 70, 123, 110, 97, 116, 105, 118, 101, 95, 118, 97, 108, 105, 100, 97, 116, 105, 111, 110, 125
+    70, 108, 111, 114, 105, 110, 32, 83, 97, 108, 97, 109
 };
 static const int flag_len = sizeof(correct_flag) / sizeof(correct_flag[0]);
 
+extern "C"
 JNIEXPORT jboolean JNICALL
-Java_com_example_safebox_Native_validateFlag(JNIEnv *env, jobject obj, jstring jflag) {
+Java_com_example_safebox_utils_Native_validateFlag(JNIEnv *env, jobject thiz, jstring jflag) {
     const char *flag = env->GetStringUTFChars(jflag, nullptr);
     if (flag == NULL) return JNI_FALSE;
 
@@ -31,7 +28,3 @@ Java_com_example_safebox_Native_validateFlag(JNIEnv *env, jobject obj, jstring j
     env->ReleaseStringUTFChars(jflag, flag);
     return JNI_TRUE;
 }
-
-#ifdef __cplusplus
-}
-#endif

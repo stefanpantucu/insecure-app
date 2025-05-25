@@ -36,6 +36,9 @@
             android:exported="false" />
 
         <activity android:name=".RootDetectedActivity" />
+        <activity android:name=".Challenge3" />
+        <activity android:name=".Challenge4" />
+        <activity android:name=".Challenge5" />
 
     </application>
 

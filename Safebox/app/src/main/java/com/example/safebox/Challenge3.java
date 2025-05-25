@@ -10,10 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Challenge3 extends AppCompatActivity {
 
-    private final int leftTouch = 1, rightTouch = 2, upTouch = 4, downTouch = 0;
+    private final int leftTouch = 1, rightTouch = 5, upTouch = 1, downTouch = 2;
     public int left = 0, right = 0, up = 0, down = 0;
 
-    // 4l, 2r, 5u, 1d, 1l, 1u, 1r
+    // 3u, 1r, 5d, 2l, 4r
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +74,7 @@ public class Challenge3 extends AppCompatActivity {
 
     private boolean puzzleUnlocked()
     {
+        System.out.println("down:" + left + " up: " + right + " right: " + down + " left: " + up);
         return leftTouch == up && downTouch == left && rightTouch == down && upTouch == right;
     }
 

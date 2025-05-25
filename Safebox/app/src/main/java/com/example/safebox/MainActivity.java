@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startVaultActivity() {
-        Intent intent = new Intent(this, VaultActivity.class);
+        Intent intent = new Intent(this, Challenge3.class);
         startActivity(intent);
         finish();
     }
