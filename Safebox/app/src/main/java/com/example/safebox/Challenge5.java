@@ -1,5 +1,6 @@
 package com.example.safebox;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,11 +26,17 @@ public class Challenge5 extends AppCompatActivity {
                 String userInput = editTextFlag.getText().toString();
                 if (ctfValidator.validateFlag(userInput)) {
                     Toast.makeText(Challenge5.this, "✅ Correct Flag!", Toast.LENGTH_SHORT).show();
+                    startVaultActivity();
                 } else {
                     Toast.makeText(Challenge5.this, "❌ Incorrect Flag", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
 
+    private void startVaultActivity() {
+        Intent intent = new Intent(this, VaultActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -16,6 +16,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/congratsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="🏆 Congratulations!\nYou've successfully bypassed all security measures!\n\nWell done, security researcher! 🎉"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        app:layout_constraintTop_toBottomOf="@id/vaultTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <EditText
         android:id="@+id/secretInput"
         android:layout_width="0dp"
@@ -23,7 +37,7 @@
         android:layout_marginTop="16dp"
         android:hint="Enter secret"
         android:inputType="textMultiLine"
-        app:layout_constraintTop_toBottomOf="@id/vaultTitle"
+        app:layout_constraintTop_toBottomOf="@id/congratsText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
